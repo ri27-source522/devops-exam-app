@@ -234,7 +234,7 @@ pipeline {
                         # Create image pull secret
                         kubectl create secret docker-registry dockerhub-creds \\
                             --docker-server=https://index.docker.io/v1/ \\
-                            --docker-username=kastrov \\
+                            --docker-username=admin439 \\
                             --docker-password=\$(cat /var/jenkins_home/docker-creds/password) \\
                             --namespace=${K8S_NAMESPACE} \\
                             --dry-run=client -o yaml | kubectl apply -f -

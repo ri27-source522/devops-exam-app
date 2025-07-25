@@ -4,13 +4,13 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "kastrov/devopsexamapp:latest"
+        DOCKER_IMAGE = "admin439/devopsexamapp:latest"
     }
 
     stages {
         stage('Git Checkout') {
             steps {
-                git url: 'https://github.com/KastroVKiran/devops-exam-app.git', 
+                git url: 'https://github.com/ri27-source522/devops-exam-app.git', 
                     branch: 'master'
             }
         }
@@ -98,13 +98,13 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "kastrov/devopsexamapp:latest"
+        DOCKER_IMAGE = "admin439/devopsexamapp:latest"
     }
 
     stages {
         stage('Git Checkout') {
             steps {
-                git url: 'https://github.com/KastroVKiran/devops-exam-app.git', 
+                git url: 'https://github.com/ri27-source522/devops-exam-app.git', 
                     branch: 'master'
             }
         }
@@ -206,7 +206,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "kastrov/devopsexamapp:latest"
+        DOCKER_IMAGE = "admin439/devopsexamapp:latest"
         EKS_CLUSTER = "devopsapp"
         K8S_NAMESPACE = "devopsexamapp"
         AWS_REGION = "us-west-2"  // Update to your region

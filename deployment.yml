@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devopsexamapp
+  namespace: devopsexamapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devopsexamapp
+  template:
+    metadata:
+      labels:
+        app: devopsexamapp
+    spec:
+      containers:
+      - name: app
+        image: admin439/devopsexamapp:latest
+        ports:
+        - containerPort: 3000
+        imagePullSecrets:
+        - name: dockerhub-creds
